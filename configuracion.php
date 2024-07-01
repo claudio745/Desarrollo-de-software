@@ -14,7 +14,7 @@
         </a>
     </div>
     <div class="container">
-        <form method="post" action="">
+        <form id="configForm" method="post" action="guardar_configuracion.php">
             <div class="form-group">
                 <button type="button" class="label-button">Notificaciones</button>
             </div>
@@ -36,5 +36,17 @@
             </div>
         </form>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('configForm');
+            form.addEventListener('input', function() {
+                // Aquí puedes agregar más lógica si necesitas validar campos antes de enviar el formulario automáticamente
+
+                // Envía el formulario automáticamente cuando hay cambios
+                form.submit();
+            });
+        });
+    </script>
 </body>
 </html>
